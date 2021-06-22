@@ -1,4 +1,5 @@
 sudo npm install -g serverless
 
-serverless create --template aws-nodejs --path myServerlessProject
+serverless config credentials --provider aws --key <key> --secret <secret> --profile serverlessUser
+serverless create --template aws-nodejs --path first-serverless-aws-project
 
