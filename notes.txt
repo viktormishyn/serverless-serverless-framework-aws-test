@@ -3,3 +3,8 @@ sudo npm install -g serverless
 serverless config credentials --provider aws --key <key> --secret <secret> --profile serverlessUser
 serverless create --template aws-nodejs --path first-serverless-aws-project
 
+sls deploy
+sls deploy -s stage --region eu-central-1
+
+sls remove
+
