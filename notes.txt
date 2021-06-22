@@ -9,3 +9,7 @@ sls deploy -s stage --region eu-central-1
 sls remove
 
 sls logs -f <function-name>
+
+# To reduce the amount of uploaded code
+npm install --save serverless-webpack
+npm install --save webpack
