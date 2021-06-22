@@ -8,3 +8,4 @@ sls deploy -s stage --region eu-central-1
 
 sls remove
 
+sls logs -f <function-name>
