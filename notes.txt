@@ -1,0 +1,4 @@
+sudo npm install -g serverless
+
+serverless create --template aws-nodejs --path myServerlessProject
+
