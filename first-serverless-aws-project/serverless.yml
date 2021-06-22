@@ -8,6 +8,14 @@ provider:
   profile: serverlessUser
   region: eu-central-1
 
+plugins:
+  - serverless-s3-sync
+  
+custom:
+  s3Sync:
+    - bucketName: serverless-tutorial-bucket-2q439w749357
+      localDir: UploadData
+
 functions:
   hello:
     handler: handler.hello
