@@ -13,3 +13,5 @@ sls logs -f <function-name>
 # To reduce the amount of uploaded code
 npm install --save serverless-webpack
 npm install --save webpack
+
+sls deploy -f <function-name>
