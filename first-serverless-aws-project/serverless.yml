@@ -16,6 +16,7 @@ package:
   individually: true
   
 custom:
+  tableName: player-points
   s3Sync:
     - bucketName: serverless-tutorial-bucket-2q439w749357
       localDir: UploadData
@@ -35,3 +36,15 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: serverless-tutorial-bucket-2q439w749357
+    DemoDynamoDbTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tableName}
+        AttributeDefinitions:
+          - AttributeName: ID
+            AttributeType: S
+        KeySchema:
+          - AttributeName: ID
+            KeyType: HASH
+        BillingMode: 'PAY_PER_REQUEST'
+
